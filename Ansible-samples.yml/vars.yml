@@ -24,3 +24,12 @@
         URL: play.sample.com
       ansible.builtin.debug:
         msg: URL = {{ URL }}
+
+- name: Play variables from inventory
+  hosts: all
+  tasks:
+    - name: print play variable from inventory
+      ansible.builtin.debug:
+        msg: URL = {{ URL }}
+
+
